@@ -50,11 +50,16 @@
                         <div class="input-request" id="moving-person-count-request">
                             <h2><span>ACTION REQUESTED</span></h2>
                             <p>How many people are involved in this move?<br>
-                                <!-- increment / decrement counter here for adults -->Adults<br>
-                                <!-- increment / decrement counter here for kids -->Kids 
+                                <!-- increment / decrement counter here for adults -->Adults
+                                <input type="text" name="adults" id="adults"/><br><br>
+                                <!-- increment / decrement counter here for kids -->Children 
+                                <input type="text" name="children" id="children"/><br><br>
+                                <input type="submit" value="Submit" id="btnSub" /><br>
                             </p>
                             <button type="button" id="calc-number-people">Determine some initial logistics and costs!</button>
                         </div>
+                        <script src="people.js"></script>
+
                         <div class="input-result" id="moving-person-count-input-result">
                             Whoa! 
                             If there are multiple adults, output text about...
@@ -110,4 +115,6 @@
         </section>
     </body>
     <script src="script.js"></script>
+    <script src="people.js"></script>
+
 </html>
