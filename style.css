@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Oxygen:wght@300;400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Oxygen', sans-serif;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+body {
+    font-family: 'Oxygen', sans-serif;
+    background-color: #000000;
+}
+
+header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("img/splash.png");
+    background-size: cover;
+    color: #FFFFFF;
+    overflow: hidden;
+}
+
+header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 60px;
+    text-align: center;
+    color: #FF0000;
+    width: 50%;
+
+}
+
+span {
+    font-family: 'Orbitron', sans-serif;
+    color: #00FFF0;
+    font-weight: bold; 
+}
+
+h2 span {
+    font-family: 'Orbitron', sans-serif;
+    color: #FF0000;
+    font-weight: bold; 
+}
+
+
+section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+}
+
+.about {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.about .about-split {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.about .about-split .left-side,
+.about .about-split .right-side {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 50%;
+}
+
+.about .about-split .left-side {
+    left: 0;
+    background-color: #FFFFFF;
+}
+
+.about .about-split .right-side {
+    left: 50%;
+    background-color: #111111;
+}
+
+.about .text-layer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    width: 80%;
+    text-align: center;
+    mix-blend-mode: exclusion;
+}
+
+.about .text-layer h1 {
+    font-size: 50px;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0px #00F0F0;
+    margin-bottom: 30px;
+}
+
+.about .text-layer p {
+    margin-bottom: 20px;
+}
+
+.about .text-layer .btn {
+    display: inline-block;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 20px 25px;
+    background-color: #FFFFFF;
+    mix-blend-mode: difference;
+    color: #111111;
+    margin-top: 10px;
+    border: 2px solid #00F0F0;
+}
+
+section .moving-location-screen,
+section .moving-person-count-screen
+{
+    position: relative;
+    flex-grow: 1;
+    transition: 1s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+section .moving-location-screen:nth-child(1),
+section .moving-person-count-screen:nth-child(1)
+{
+    background: #FFFFFF;
+}
+
+section .moving-location-screen:nth-child(2),
+section .moving-person-count-screen:nth-child(2)
+{
+    background: #000000;
+}
+
+section .moving-location-screen .card,
+section .moving-person-count-screen .card 
+{
+    max-width: 300px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+section .moving-location-screen .card .card-image,
+section .moving-person-count-screen .card .card-image
+{
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+section .moving-location-screen:nth-child(1) .card p,
+section .moving-person-count-screen:nth-child(1) .card p 
+{
+    color: #111111;
+}
+
+section .moving-location-screen:nth-child(1) .card button,
+section .moving-person-count-screen:nth-child(1) .card button
+    {
+    padding: 10px 20px;
+    color: #FFFFFF;
+    background: #111111;
+    font-family: 'Orbitron', sans-serif; 
+    margin-top: 20px;
+}
+
