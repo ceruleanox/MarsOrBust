@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <h1>
+            Retirement Calculator 
+        </h1>
+        <script src='Rcalculator.js'></script>
+        <style>
+            body {
+              font-family: 'Courier New', Courier, monospace;
+            }
+        
+        </style>
+    </head>
+    
+
+   
+    <body>
+        Annual Income: <input class='inputs' type="text" id="income" value=""><br><br>
+        Age: <input  class='inputs' type="text" id="cage" value="">
+        Expected Retirement Age: <input class='inputs' type="text" id="rage" value=""><br><br>
+        Expected Inflation Rate: <input class='inputs' type="text" id="rate" value=""><br><br>
+        Percentage of Annual Income needed: <input class='inputs' type="text" id="rincome" value=""><br><br>
+        <button onclick="myFunction()">Submit </button>
+        <button onclick="clear_inputs()">Clear </button>
+        <p id="estimate"></p>
+    </body>
+
+</html>
