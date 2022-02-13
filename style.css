@@ -5,7 +5,6 @@
     padding: 0;
     font-family: 'Oxygen', sans-serif;
     font-size: 16px;
-    color: #FFFFFF;
 }
 
 body {
@@ -18,20 +17,95 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("img/splash.png");
+    /*background-image: url("img/splash.png");*/
     background-size: cover;
     color: #FFFFFF;
     overflow: hidden;
 }
 
-header h1 {
+header .video-background .text-wrap h1 {
     font-family: 'Orbitron', sans-serif;
     font-size: 60px;
     text-align: center;
     color: #FF0000;
-    width: 50%;
-
+    
 }
+
+header .video-background {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+
+header .video-background .text-wrap {
+    z-index: 20;
+    width: 100%;
+    position: absolute; 
+    text-align: center;
+    top: 20%;
+    font-size: 5vw;
+    font-weight: lighter;
+}
+
+.video-src {
+    z-index: 2;
+    height: 100vh;
+    width: 100vw;
+    background-size: 100% auto;
+    background-position: center right;
+    background-size: cover;
+    object-fit: cover;
+    filter: brightness(20%);
+}
+
+/* Arrow & Hover Animation modified from https://freebiesupply.com/blog/css-arrows/ */
+
+
+.arrow-wrap {
+    z-index: 20;
+    width: 100%;
+    position: absolute; 
+    text-align: center;
+    top: 85%;
+    font-size: 2vw;
+}
+
+.to-about {
+    color: #FFF;
+    padding-top: 1.8em;
+    display: block;
+    position: relative;
+    border-color: #FFF;
+    text-decoration: none;
+    transition: all .3s ease-out;
+  }
+
+  .to-about::before{
+    content:'▼';
+    font-size:.9em;
+    position:absolute;
+    top:0;
+    left:50%;
+    margin-left:-.7em;
+    border:solid .13em white;
+    border-radius:10em;
+    width:1.4em;
+    height:1.4em;
+    line-height:1.3em;
+    border-color:inherit;
+    transition:transform .5s ease-in;
+  }
+
+  .to-about:hover{
+    color:#FF7F00;
+    border-color:#FF7F00;
+  }
+
+  .to-about:hover::before{
+    transform: rotate(360deg);
+  }
+
+
 
 span {
     font-family: 'Orbitron', sans-serif;
@@ -45,6 +119,15 @@ h2 span {
     font-weight: bold; 
 }
 
+h3 {
+    color: #000000;
+    font-size: 18px;
+}
+
+h4 {
+    color: #FFFFFF;
+    font-size: 18px;
+}
 
 section {
     position: relative;
@@ -163,7 +246,8 @@ section .moving-person-count-screen .card .card-image
 }
 
 section .moving-location-screen:nth-child(1) .card p,
-section .moving-person-count-screen:nth-child(1) .card p 
+section .moving-person-count-screen:nth-child(1) .card p
+/*section .moving-person-count-screen:nth-child(1) .card .card-img .moving-person-count-input-result.input-result,*/
 {
     color: #111111;
 }
@@ -178,3 +262,20 @@ section .moving-person-count-screen:nth-child(1) .card button
     margin-top: 20px;
 }
 
+.input-result {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 16px;
+    background: #FFF;
+    transition: .5s;
+    opacity: 0;
+    visibility:hidden;
+}
+
+section .final-calculations {
+    color: #000000;
+}

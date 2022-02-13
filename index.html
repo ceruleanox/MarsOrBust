@@ -4,13 +4,31 @@
         <meta name="viewport" content="width=device-width">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <link rel="stylesheet" href="./style.css">
+        <script src='Rcalculator.js'></script>
+        <script src="people.js"></script>
         <title>How Much Does Moving to Mars Cost?</title>
     </head>
     <body>
         <header>
-            <h1>How Much Does Moving to Mars Cost?</h1>
+            <div class="video-background">
+                <div class="text-wrap">
+                    <h1>How Much Does It Cost<br> to Move To Mars?<br>
+                        <span>The next frontier:</span></h2>                
+                    <h3>a hypothetical reality</h3>
+                </div>
+                <div class="video-wrap">
+                    <div id="video">
+                        <video id="bgvid" class="video-src" autoplay loop muted style="display:block">
+                            <source src="home.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                </div>
+                <div class="arrow-wrap">
+                    <a href="#about" class="to-about">Read More</a>
+                </div>
+            </div>
         </header>
-        <section class="about-section">
+        <section class="about-section" id="about">
             <div class="about">
                 <div class="about-split">
                     <div class="left-side">
@@ -22,28 +40,29 @@
                     <h1>Introduction</h1>
 
                     <p><span>READY TO LIVE ON MARS?</span> 
-                        It could become an option soon, if SpaceX CEO Elon Musk succeeds in building a self-sustaining city on the Red Planet.  
-                        This city would be open to regular people, not just scientists and researchers.</p> 
-                        
-                    <p>As we know, moving to a new place can be stressful and expensive. 
+                        <h4>It could become an option soon, if SpaceX CEO Elon Musk succeeds in building a self-sustaining city on the Red Planet.  
+                        This city would be open to regular people, not just scientists and researchers.                    </h4>
+                    </p> 
+
+                    <p><h4>As we know, moving to a new place can be stressful and expensive. 
                         Moving to a new planet can be that and a lot more complex.
                         Let us help you think through some logistics you'll come across with any move. 
                         Afterwards, we'll do the heavy lifting of calculating ballpark pricing for the move in an instant. 
-                        Knowing this figure can inform you about whether you're on track to making this happen. </p>
+                        Knowing this figure can inform you about whether you're on track to making this happen. </h4></p>
                     
                     <h1>Inspiration</h1>
 
-                    "Space Adventure: The Arrival of Man on the Moon", a full-scale recreation of an Apollo moon landing, will make its touring exhibition debut at Maurice A. Ferré Park in downtown Miami, Florida on April 7, 2022. Channeling our own Elon Musk vision, we look forward to the arrival of civilization on Mars.
+                <h4>"Space Adventure: The Arrival of Man on the Moon", a full-scale recreation of an Apollo moon landing, will make its touring exhibition debut at Maurice A. Ferré Park in downtown Miami, Florida on April 7, 2022. Channeling our own Elon Musk vision, we look forward to the arrival of civilization on Mars.</h4>
 
                     <h1>What to Expect</h1>
 
-                    <p>The screen is split into two columns. On the left side, provide information about a move you might make. On the right side, we'll lay out our logic for calculation. What are you waiting for?</p>
+                    <p><h4>The screen is split into two columns. On the left side, provide information about a move you might make. On the right side, we'll lay out our logic for calculation. What are you waiting for?</h4></p>
                     
-                    <a href="#" class="btn">Let's start calculating!</a>
+                    <a href="#num-person" class="btn">Let's start calculating!</a>
                 </div>
             </div>
         </section>
-        <section class="moving-person-count">
+        <section class="moving-person-count" id="num-person">
             <div class="moving-person-count-screen">
                 <div class="card">
                     <div class="card-img">
@@ -51,20 +70,21 @@
                             <h2><span>ACTION REQUESTED</span></h2>
                             <p>How many people are involved in this move?<br>
                                 <!-- increment / decrement counter here for adults -->Adults
-                                <input type="text" name="adults" id="adults"/><br><br>
+                                <input type="text" name="adults" id="adults" value=""/><br><br>
                                 <!-- increment / decrement counter here for kids -->Children 
                                 <input type="text" name="children" id="children"/><br><br>
-                                <input type="submit" value="Submit" id="btnSub" /><br>
+                                <!-- <input type="submit" value="Submit" id="btnSub" /><br>
+                                -->
                             </p>
-                            <button type="button" id="calc-number-people">Determine some initial logistics and costs!</button>
+                            <button type="button" id="btnSub" onclick="processInputpassengers()">Determine some initial logistics and costs!</button>
                         </div>
-                        <script src="people.js"></script>
 
                         <div class="input-result" id="moving-person-count-input-result">
-                            Whoa! 
+                            <h3>Whoa! 
                             If there are multiple adults, output text about...
                             If there are children, output text that talks about medication, food stops, bathroom stops (may need to purchase something to use!)  
                             If only children are moving... don't allow and ask why?
+                            </h3>
                             <button type="button" id="calc-person-count-local-more">Read More</button><br>
                             <button type="button" id="calc-person-count-again">Redo Count</button>
                         </div>
@@ -74,7 +94,7 @@
             <div class="moving-location-screen">
                 <div class="card">
                     <div class="card-img">
-                        Astronauts have to train to travel to outerspace, and so do regular people. For example, how do you go the bathroom in zero gravity? 
+                        <h4>Astronauts have to train to travel to outerspace, and so do regular people. For example, how do you go the bathroom in zero gravity?</h4> 
                     </div>
                 </div>
             </div>
@@ -102,19 +122,35 @@
             <div class="moving-location-screen">
                 <div class="card">
                     <div class="card-img">
+                    <h4>
                         Starting location to space shuttle - gas cost
                         Earth to Mars fuel
                         Now factor in the cost of 
+                    </h4>
                     </div>
                 </div>
             </div>
         </section>
         <section class="final-calculations">
             <h2><span>Are you ready to move?</span></h2>
-            When you add up the costs, you'll need X amount. Here's a visualization of how long it will take you to have enough to move. 
+            <br><br>
+            <!--
+            <p>When you add up the costs, you'll need X amount. Here's a visualization of how long it will take you to have enough to move.</p>
+            -->
+        
+            <p><h4>Annual Income: <input class='inputs' type="text" id="income" value=""><br><br>
+                Age: <input  class='inputs' type="text" id="cage" value="">
+                Expected Retirement Age: <input class='inputs' type="text" id="rage" value=""><br><br>
+                Expected Inflation Rate: <input class='inputs' type="text" id="rate" value=""><br><br>
+                Percentage of Annual Income needed: <input class='inputs' type="text" id="rincome" value=""><br><br>
+                <button onclick="myFunction()">Submit </button>
+                <button onclick="clear_inputs()">Clear </button>
+                <p id="estimate"></p>
+            </h4>
+        </p>
         </section>
     </body>
     <script src="script.js"></script>
-    <script src="people.js"></script>
+
 
 </html>
